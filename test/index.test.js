@@ -19,53 +19,53 @@ const { numbers, strings, dates } = require('../src')
 
 // })
 
-// describe('Strings module', () => {
-// 
-  // test('Split a string on the given delimeter', () => {
-    // const split = strings.split('a-new-string', '-')
-    // expect(split.length).toEqual(3)
-    // expect(split[0]).toBe('a')
-    // expect(split[1]).toBe('new')
-    // expect(split[2]).toBe('string')
-  // })
-// 
-  // test('Break a string into pairs', () => {
-    // const pairs = strings.pairs('abcdefghijklmnop')
-    // expect(pairs.length).toEqual(8)
-    // expect(pairs).toContain('gh')
-    // expect(pairs).toEqual(['ab', 'cd', 'ef', 'gh', 'ij', 'kl', 'mn', 'op'])
-  // })
-// 
-  // test('Reverse a string', () => {
-    // const reversed = strings.reverse('a blue dog')
-    // expect(reversed).toBe('god eulb a')
-  // })
-// 
-// })
+describe('Strings module', () => {
 
-describe('Dates module', () => {
-
-  test('Return today\'s day - ex. Monday', () => {
-    const weekdays = [
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday'
-    ]
-
-    const day = dates.today()
-    expect(weekdays).toContain(day)
+  test('Split a string on the given delimeter', () => {
+    const split = strings.split('a-new-string', '-')
+    expect(split.length).toEqual(3)
+    expect(split[0]).toBe('a')
+    expect(split[1]).toBe('new')
+    expect(split[2]).toBe('string')
   })
 
-  test('Return today\'s date in the format: May 29, 2019', () => {
-    const cal = dates.calendar()
-    expect(cal).toMatch(/^[A-z]{4} [0-9]{1}, [0-9]{4}$/)
+  test('Break a string into pairs', () => {
+    const pairs = strings.pairs('abcdefghijklmnop')
+    expect(pairs.length).toEqual(8)
+    expect(pairs).toContain('gh')
+    expect(pairs).toEqual(['ab', 'cd', 'ef', 'gh', 'ij', 'kl', 'mn', 'op'])
   })
 
-  test('Return the current time in the format: 03:21:51 PM', () => {
-    const time = dates.currentTime()
-    expect(time).toMatch(/^[0-9]{2}:[0-9]{2}:[0-9]{2} [A-Z]{2}$/)
+  test('Reverse a string', () => {
+    const reversed = strings.reverse('a blue dog')
+    expect(reversed).toBe('god eulb a')
   })
 
 })
+
+// describe('Dates module', () => {
+
+//   test('Return today\'s day - ex. Monday', () => {
+//     const weekdays = [
+//       'Monday',
+//       'Tuesday',
+//       'Wednesday',
+//       'Thursday',
+//       'Friday'
+//     ]
+
+//     const day = dates.today()
+//     expect(weekdays).toContain(day)
+//   })
+
+//   test('Return today\'s date in the format: May 29, 2019', () => {
+//     const cal = dates.calendar()
+//     expect(cal).toMatch(/^[A-z]{4} [0-9]{1}, [0-9]{4}$/)
+//   })
+
+//   test('Return the current time in the format: 03:21:51 PM', () => {
+//     const time = dates.currentTime()
+//     expect(time).toMatch(/^[0-9]{2}:[0-9]{2}:[0-9]{2} [A-Z]{2}$/)
+//   })
+
+// })
